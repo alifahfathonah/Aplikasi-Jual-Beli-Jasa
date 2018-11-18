@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "1016878774371",
+    "firebase_url": "https://aplikasi-jual-be-1521055255308.firebaseio.com",
+    "project_id": "aplikasi-jual-be-1521055255308",
+    "storage_bucket": "aplikasi-jual-be-1521055255308.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1016878774371:android:0cd6bbc23d4e948c",
+        "android_client_info": {
+          "package_name": "app.skripsi.hva.aplikasijualbelijasa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1016878774371-efu2o07cvrg8h5on1ve5r04hv7m1ttgd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.skripsi.hva.aplikasijualbelijasa",
+            "certificate_hash": "7cbcc4b183f71e2bf7ee754d95512ce0519c06a9"
+          }
+        },
+        {
+          "client_id": "1016878774371-cpsud8ufnpfe5c7kreoe86fbkp6nqdu9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.skripsi.hva.aplikasijualbelijasa",
+            "certificate_hash": "8e2ad0cb33c84557f1a07fd87ce6dd94027afcd6"
+          }
+        },
+        {
+          "client_id": "1016878774371-thslcc4car1ul23h40evj51arrcsi42a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUL73__5TuxQsVZDaHeOjp8dMJCwVcMOc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1016878774371-thslcc4car1ul23h40evj51arrcsi42a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

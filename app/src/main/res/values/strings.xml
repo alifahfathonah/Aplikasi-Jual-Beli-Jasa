@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">Aplikasi Jual Beli Jasa</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Keluar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_activity_welcome">Halaman Awal</string>
+    <string name="next">LANJUT</string>
+    <string name="skip">LEWATI</string>
+    <string name="start">MENGERTI</string>
+
+    <string name="slide_1_title">Cari Jasa!</string>
+    <string name="slide_1_desc">Aplikasi untuk mencari jasa yang anda butuhkan!</string>
+
+    <string name="slide_2_title">Saring Pencarian</string>
+    <string name="slide_2_desc">Cari jasa yang anda butuhkan berdasar kategori dan lokasi terdekat!</string>
+
+    <string name="slide_3_title">Iklankan Jasa</string>
+    <string name="slide_3_desc">Iklankan jasa yang anda miliki dengan menu Iklankan!</string>
+
+    <string name="slide_4_title">Hubungi Penjual</string>
+    <string name="slide_4_desc">Terhubung dengan penjual jasa dengan Google Maps dan WhatsApp!</string>
+
+    <!--Facebook Login-->
+    <string name="facebook_app_id">2096807417269825</string>
+    <string name="fb_login_protocol_scheme">fb2096807417269825</string>
+
+    <!--FB Account Kit-->
+    <string name="FACEBOOK_APP_ID">2096807417269825</string>
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">a24b0386fdde47018e2a4ad6dcf802ba</string>
+
+    // if your Facebook App ID is 1234567, you should use ak1234567
+    <string name="ak_login_protocol_scheme">ak2096807417269825</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Kata sandi</string>
+
+    <!--Pencarian-->
+    <string name="search">Pencarian</string>
+    <string name="type_name">Ketik nama jasa</string>
+
+    <!--Layout-->
+    <string name="login_header">SELAMAT DATANG</string>
+    <string name="perintah_login">Silakan Masuk dengan Akun</string>
+    <string name="akun">Nama pengguna</string>
+    <string name="password">Masukkan kata sandi</string>
+    <string name="btn_login">Masuk</string>
+    <string name="pertanyaan_login">Belum memiliki akun?</string>
+    <string name="daftar">atau buat akun dengan:</string>
+    <string name="btn_nomor_ponsel">Nomor Ponsel</string>
+    <string name="btn_email">Email</string>
+    <string name="register_upload_foto">(Klik pada gambar untuk mengunggah foto)</string>
+    <string name="nama">Nama pengguna</string>
+    <string name="konfirmasi_password">Konfirmasi kata sandi</string>
+    <string name="buat_akun">Buat Akun</string>
+    <string name="menu_halaman_depan">Halaman Depan</string>
+    <string name="menu_profil">Profil</string>
+    <string name="menu_iklankan">Iklankan</string>
+    <string name="menu_communicate">Dukungan</string>
+    <string name="menu_bantuan">Bantuan</string>
+    <string name="menu_tentang_aplikasi">Tentang Aplikasi</string>
+    <string name="nama_akun">Nama Akun</string>
+    <string name="penyewaan">Penyewaan</string>
+    <string name="perbaikan">Perbaikan</string>
+    <string name="desain_dan_dokumentasi">Desain</string>
+    <string name="acara_dan_hiburan">Acara</string>
+
+</resources>

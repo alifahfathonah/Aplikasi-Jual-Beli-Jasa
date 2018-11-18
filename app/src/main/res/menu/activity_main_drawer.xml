@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_depan"
+            android:icon="@drawable/beranda"
+            android:title="@string/menu_halaman_depan" />
+        <item
+            android:id="@+id/nav_profil"
+            android:icon="@drawable/profil"
+            android:title="@string/menu_profil" />
+        <item
+            android:id="@+id/nav_iklankan"
+            android:icon="@drawable/ic_iklankan"
+            android:title="@string/menu_iklankan" />
+    </group>
+
+    <item android:title="@string/menu_communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_bantuan"
+                android:icon="@drawable/bantuan"
+                android:title="@string/menu_bantuan" />
+            <item
+                android:id="@+id/nav_tentang"
+                android:icon="@drawable/about"
+                android:title="@string/menu_tentang_aplikasi" />
+        </menu>
+    </item>
+
+</menu>
