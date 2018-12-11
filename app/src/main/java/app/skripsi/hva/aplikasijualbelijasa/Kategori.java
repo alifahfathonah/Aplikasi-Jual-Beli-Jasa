@@ -45,6 +45,9 @@ public class Kategori extends Fragment {
     private ArrayList<DataKategori> kategoris;
     private GridKategoriAdapter gridKategoriAdapter;
     public TextView textKategori;
+    private ArrayList<Integer> jml = new ArrayList<Integer>();
+    public ArrayList<Integer> pakai = new ArrayList<Integer>();
+
     private static final String url = Server.URL + "Kategori.php";
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -55,14 +58,26 @@ public class Kategori extends Fragment {
         kategoris = new ArrayList<>();
         rvCategory = (RecyclerView) rootView.findViewById(R.id.rv_category);
         rvCategory.setLayoutManager(new LinearLayoutManager(getActivity()));
-        textKategori = (TextView) rootView.findViewById(R.id.textKategori);
 
-        callDataKategori();
+        for (int i = 0; i < 20; i++){
+            jml.add(i);
+        }
+
+        pakai.add(1);
+        pakai.add(2);
+        pakai.add(3);
+
+        rvCategory.setLayoutManager(new GridLayoutManager(getActivity(), 5));
+        GridKategoriAdapter gridKategoriAdapter = new GridKategoriAdapter(getActivity(), jml);
+        /*gridKategoriAdapter.setListKategori(list);*/
+        rvCategory.setAdapter(gridKategoriAdapter);
+
+        /*callDataKategori();*/
         return rootView;
     }
 
     // untuk menampilkan lokasi penjual jasa terdekat dari device pengguna
-    private void callDataKategori() {
+    /*private void callDataKategori() {
 
         JsonArrayRequest jArr = new JsonArrayRequest(url,
                 new Response.Listener<JSONArray>() {
@@ -84,12 +99,12 @@ public class Kategori extends Fragment {
                                 dataKategori.setImage_kategori(obj.getString("image_kategori"));
 
                                 kategoris.add(dataKategori);
-                                /*gridKategoriAdapter = new GridKategoriAdapter(getContext(), kategoris);*/
-                                /*rvCategory.setAdapter(gridKategoriAdapter);*/
+                                *//*gridKategoriAdapter = new GridKategoriAdapter(getContext(), kategoris);*//*
+                                *//*rvCategory.setAdapter(gridKategoriAdapter);*//*
 
                                 rvCategory.setLayoutManager(new GridLayoutManager(getActivity(), 3));
-                                GridKategoriAdapter gridKategoriAdapter = new GridKategoriAdapter(getActivity(), kategoris);
-                                /*gridKategoriAdapter.setListKategori(list);*/
+                                GridKategoriAdapter gridKategoriAdapter = new GridKategoriAdapter(getActivity(), );
+                                *//*gridKategoriAdapter.setListKategori(list);*//*
                                 rvCategory.setAdapter(gridKategoriAdapter);
 
                             } catch (JSONException e) {
@@ -112,7 +127,7 @@ public class Kategori extends Fragment {
 
         // menambah permintaan ke queue
         AppController.getInstance().addToRequestQueue(jArr);
-    }
+    }*/
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState){
