@@ -7,12 +7,15 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
 import app.skripsi.hva.aplikasijualbelijasa.Iklan;
 
+import app.skripsi.hva.aplikasijualbelijasa.Kategori;
 import app.skripsi.hva.aplikasijualbelijasa.R;
 import app.skripsi.hva.aplikasijualbelijasa.app.AppController;
 import app.skripsi.hva.aplikasijualbelijasa.data.DataKategori;
@@ -21,11 +24,12 @@ import java.util.ArrayList;
 
 public class GridKategoriAdapter extends RecyclerView.Adapter<GridKategoriAdapter.ViewHolder>{
     private Context context;
-    private ArrayList<DataKategori> listKategori;
+    /*private ArrayList<DataKategori> listKategori;*/
+    ArrayList<Integer> jumlah;
     private ImageLoader imageLoader;
 
-    public GridKategoriAdapter(Context context, ArrayList<DataKategori> listKategori){
-        this.listKategori = listKategori;
+    public GridKategoriAdapter(Context context, ArrayList<Integer> jumlah){
+        this.jumlah = jumlah;
         this.context = context;
     }
 
@@ -37,8 +41,30 @@ public class GridKategoriAdapter extends RecyclerView.Adapter<GridKategoriAdapte
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, final int position){
-        DataKategori dataKategori = listKategori.get(position);
+    public void onBindViewHolder(final ViewHolder holder, final int position){
+
+            holder.btnK.setText(String.valueOf(jumlah.get(position).toString()));
+
+        Kategori kategori = new Kategori();
+
+
+        final String nmt = holder.btnK.getText().toString();
+            holder.btnK.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Toast.makeText(v.getContext(), "Diklik" + nmt, Toast.LENGTH_LONG).show();
+                }
+            });
+
+
+        holder.btnK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        /*DataKategori dataKategori = listKategori.get(position);
 
         holder.textKategori.setText(String.valueOf(listKategori.get(position).getKategori()));
         holder.thumbNail.setImageUrl(dataKategori.getImage_kategori(), imageLoader);
@@ -54,26 +80,25 @@ public class GridKategoriAdapter extends RecyclerView.Adapter<GridKategoriAdapte
                 iklan.setArguments(bundleKategori);
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.content_main, iklan).addToBackStack(null).commit();
             }
-        });
+        });*/
     }
 
     @Override
     public int getItemCount() {
-        return listKategori.size();
+        return jumlah.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView textKategori;
-        NetworkImageView thumbNail;
+        Button btnK;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            textKategori = (TextView)itemView.findViewById(R.id.textKategori);
+            btnK = (Button) itemView.findViewById(R.id.btn);
 
-            if (imageLoader == null)
+            /*if (imageLoader == null)
                 imageLoader = AppController.getInstance().getImageLoader();
             thumbNail = (NetworkImageView) itemView
-                    .findViewById(R.id.img_item_photo);
+                    .findViewById(R.id.img_item_photo);*/
         }
     }
 
