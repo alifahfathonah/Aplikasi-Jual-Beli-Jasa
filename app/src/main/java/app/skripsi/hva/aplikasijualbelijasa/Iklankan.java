@@ -21,6 +21,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
@@ -120,6 +121,8 @@ public class Iklankan extends Fragment implements View.OnClickListener{
     public static final String TAG_ID_KATEGORI = "id_kategori";
     public static final String TAG_KATEGORI = "nama_kategori";
 
+    ArrayList<String> kategoriSpinner = new ArrayList<String>();
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -173,21 +176,25 @@ public class Iklankan extends Fragment implements View.OnClickListener{
 
         //Spinner Data Load
         spinnerKategori = (Spinner) iklankanView.findViewById(R.id.spinnerKategori);
+        kategoriSpinner.add("-- Pilih Kategori --");
+
+        ArrayAdapter<String> ktgri = new ArrayAdapter<String>(getActivity(),
+                android.R.layout.simple_spinner_dropdown_item,
+                kategoriSpinner);
 
         adapterKategori = new AdapterKategori(getActivity(), listKategori);
-        spinnerKategori.setAdapter(adapterKategori);
+        spinnerKategori.setAdapter(ktgri);
 
         spinnerKategori.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 // TODO Auto-generated method stub
+                String txtKategori = spinnerKategori.getSelectedItem().toString();
+                /*String txtKategori = listKategori.get(position).getKategori();*/
+                    Toast.makeText(getActivity(), txtKategori, Toast.LENGTH_SHORT).show();
+                    txt_kategori.setText(spinnerKategori.getSelectedItem().toString()/*listKategori.get(position).getId()*/);
 
-                if (spinnerKategori.getSelectedItem() == "Pilih Kategori"){
-
-                } else {
-                    txt_kategori.setText(listKategori.get(position).getId());
-                }
             }
 
             @Override
@@ -233,7 +240,8 @@ public class Iklankan extends Fragment implements View.OnClickListener{
                                 item.setId(obj.getString(TAG_ID_KATEGORI));
                                 item.setKategori(obj.getString(TAG_KATEGORI));
 
-                                listKategori.add(item);
+                                kategoriSpinner.add(obj.getString(TAG_KATEGORI));
+                                 listKategori.add(item);
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
