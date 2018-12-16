@@ -67,7 +67,8 @@ public class MainActivity extends AppCompatActivity
         Profil.OnfragmentInteractionListener,
         Iklankan.OnFragmentInteractionListener,
         Bantuan.OnfragmentInteractionListener,
-        Tentang.OnfragmentInteractionListener{
+        Tentang.OnfragmentInteractionListener,
+        Daftar.OnfragmentInteractionListener{
 
     Button btn_logout;
     TextView txt_id, txt_username;
